@@ -11,16 +11,8 @@ import {
 
   function Topics() {
     let match = useRouteMatch();
-    console.log('match');
+    console.log('useRouteMatch() as match');
     console.log(match);
-    console.log('match.url/components');
-    console.log(`${match.url}/components`);
-    console.log('match.url/props-v-state');
-    console.log(`${match.url}/props-v-state`);
-    console.log('match.path/:topicId');
-    console.log(`${match.path}/:topicId`);
-    console.log('match.path');
-    console.log(match.path);
 
     return (
       <div>
@@ -37,10 +29,9 @@ import {
           </li>
         </ul>
   
-        {/* The Topics page has its own <Switch> with more routes
-            that build on the /topics URL path. You can think of the
-            2nd <Route> here as an "index" page for all topics, or
-            the page that is shown when no topic is selected */}
+        {/* The Topics page has its own <Switch> with more routes that build on the /topics URL path.
+        You can think of the 2nd <Route> here as an "index" page for all topics,
+        or the page that is shown when no topic is selected */}
         <Switch>
           <Route path={`${match.path}/:topicId`}>
             <Topic />
@@ -55,7 +46,7 @@ import {
   
   function Topic() {
     let { topicId } = useParams();
-    console.log('useParams()');
+    console.log('useParams() as topicId');
     console.log(topicId);
     return <h3>Requested topic ID: {topicId}</h3>;
   }

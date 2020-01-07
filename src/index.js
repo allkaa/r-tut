@@ -117,6 +117,8 @@ function tick() {
 */
 //setInterval(tick, 1000);
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(
+<App />,
+document.getElementById('root'))
 
 //setTimeout(() => {ReactDOM.unmountComponentAtNode(document.getElementById('root'));}, 10000);
