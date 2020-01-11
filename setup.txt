@@ -461,3 +461,29 @@ origin  https://github.com/allkaa/r-tut.git (push)
 
 C:\react\react-tutorial>
 ===========================================================================================
+on debian
+akaarna@unl:~/r-tut$ git clone https://github.com/allkaa/r-tut.git
+Cloning into 'r-tut'...
+remote: Enumerating objects: 1671, done.
+remote: Counting objects: 100% (1671/1671), done.
+remote: Compressing objects: 100% (521/521), done.
+remote: Total 1671 (delta 1146), reused 1671 (delta 1146), pack-reused 0
+Receiving objects: 100% (1671/1671), 3.82 MiB | 1.16 MiB/s, done.
+Resolving deltas: 100% (1146/1146), done.
+akaarna@unl:~/r-tut$ ls
+r-tut
+akaarna@unl:~/r-tut$ cd r-tut
+akaarna@unl:~/r-tut/r-tut$ ls
+aaa.txt                 flexbox0.html                        json.js                      packageForLocalBuild.json     setup.txt
+appWeb.js               formidableFormFileUpload.js          logo.png                     package.json                  src
+Async_Await_Promise.js  formInputText.js                     navSample.html               package-lock.json             style.css
+closures2.js            funcs.js                             nodeSecureServer.js          public                        styleTest.css
+closures.js             indexCollege.html                    nodeServerTestDiag.js        README.md                     superheroes.json
+Es161718.js             index.html                           nodeServerTest.js            scriptsFetch.js               test.js
+external-link-52.png    indexRespImg.html                    oojs.js                      scriptsFetchXML.js            ttt.js
+favicon.ico             indexscriptsXMLHttpRequestJSON.html  oopjscl.js                   scriptsTest.js                unl.test.pfx
+FileUploadbodyPUT.js    indexTest.html                       oopjs.js                     scriptsXMLHttpRequestJSON.js
+Films.json              JsonAndOthers.js                     packageForDeployGitHub.json  scriptsXMLHttpRequestXML.js
+akaarna@unl:~/r-tut/r-tut$ ls -s
+===============================================================================================================================
+
