@@ -404,3 +404,60 @@ Options:
   -h, --help               output usage information
 akaarna@unl:~/react-tutorial$ 
 ==============================================================================================================
+===========================================================================================
+Create new remote empty repository https://github.com/allkaa/r-tut
+
+and then
+git remote add origin https://github.com/allkaa/r-tut.git
+git push -u origin master
+
+akaarna@unl:~/react-tutorial$ git remote add origin https://github.com/allkaa/react-tutorial.git
+akaarna@unl:~/react-tutorial$ git push -u origin master
+Username for 'https://github.com': allkaa
+Password for 'https://allkaa@github.com': h...3!
+Counting objects: 161, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (160/160), done.
+Writing objects: 100% (161/161), 164.13 KiB | 0 bytes/s, done.
+Total 161 (delta 95), reused 0 (delta 0)
+remote: Resolving deltas: 100% (95/95), done.
+To https://github.com/allkaa/react-tutorial.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+akaarna@unl:~/react-tutorial$ 
+
+Create new remote empty repository https://github.com/allkaa/r-tut
+
+and then
+
+git remote add origin https://github.com/allkaa/r-tut.git
+git push -u origin master
+
+C:\react\react-tutorial>git remote -v
+origin  https://github.com/allkaa/react-tutorial.git (fetch)
+origin  https://github.com/allkaa/react-tutorial.git (push)
+
+C:\react\react-tutorial>git remote remove origin
+
+C:\react\react-tutorial>git remote -v
+
+C:\react\react-tutorial>git remote add origin https://github.com/allkaa/r-tut.git
+
+C:\react\react-tutorial>git push -u origin master
+Counting objects: 1668, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (555/555), done.
+Writing objects: 100% (1668/1668), 3.82 MiB | 1.41 MiB/s, done.
+Total 1668 (delta 1144), reused 1611 (delta 1109)
+remote: Resolving deltas: 100% (1144/1144), done.
+To https://github.com/allkaa/r-tut.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+C:\react\react-tutorial>
+C:\react\react-tutorial>git remote -v
+origin  https://github.com/allkaa/r-tut.git (fetch)
+origin  https://github.com/allkaa/r-tut.git (push)
+
+C:\react\react-tutorial>
+===========================================================================================
