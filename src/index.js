@@ -86,7 +86,8 @@ import './styleHWT.css' // <--------
 //import App from './AppFetchXML'
 //import App from './AppXhrXml'
 //import App from './AppXhrFormDataOld'
-import App from './App'
+//import App from './App'
+import App from './BasicExample'
 
 /*
 // A class component must include render(), and the return statement can only return ONE parent element:
