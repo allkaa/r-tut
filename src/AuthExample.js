@@ -89,6 +89,10 @@ function AuthButton() {
 // A wrapper for <Route> that redirects to the login
 // screen if you're not yet authenticated.
 function PrivateRoute({ children, ...rest }) {
+  console.log("children:")
+  console.log(children);
+  console.log("{...rest}:")
+  console.log({...rest});
   return (
     <Route
       {...rest}
@@ -123,9 +127,10 @@ function LoginPage() {
   console.log(location.state);
 
   let { from } = location.state || { from: { pathname: "/" } };
-  console.log("location.state:");
+  console.log("{from}:");
   console.log({from});
   let login = () => {
+    console.log("login activated");
     fakeAuth.authenticate(() => {
       history.replace(from);
     });
