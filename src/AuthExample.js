@@ -119,8 +119,12 @@ function ProtectedPage() {
 function LoginPage() {
   let history = useHistory();
   let location = useLocation();
+  console.log("location.state:");
+  console.log(location.state);
 
   let { from } = location.state || { from: { pathname: "/" } };
+  console.log("location.state:");
+  console.log({from});
   let login = () => {
     fakeAuth.authenticate(() => {
       history.replace(from);
