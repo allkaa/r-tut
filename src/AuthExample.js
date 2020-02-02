@@ -74,8 +74,9 @@ function AuthButton() {
   console.log("AuthButton function activated.")
   return fakeAuth.isAuthenticated ? (
     <p>
+      {console.log('AuthButton called with fakeAuth.isAuthenticated=true')}
       Welcome!{" "}
-      {console.log('fakeAuth.signout called with cb as () => history.push("/");')}
+      {console.log('AuthButton calls fakeAuth.signout with cb as () => history.push("/");')}
       <button
         onClick={() => {
           fakeAuth.signout(() => history.push("/"));
@@ -85,7 +86,10 @@ function AuthButton() {
       </button>
     </p>
   ) : (
-    <p>You are not logged in.</p>
+    <p>
+      {console.log('AuthButton called with fakeAuth.isAuthenticated=false')}
+      You are not logged in.
+    </p>
   );
 }
 
