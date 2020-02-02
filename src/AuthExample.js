@@ -95,8 +95,10 @@ function PrivateRoute({ children, ...rest }) {
   console.log("Private Route function activated.");
   console.log("Private Route function children:");
   console.log(children);
-  console.log("Private Route function {...rest}:");
-  console.log({...rest});
+  console.log("Private Route function ...rest:");
+  console.log(rest);
+  console.log("Private Route function rest.location:");
+  console.log(rest.location);
   return (
     <Route
       {...rest}
