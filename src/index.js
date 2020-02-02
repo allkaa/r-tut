@@ -103,6 +103,7 @@ class App extends Component {
   }
 }
 */
+console.log('index.js document.domain:');
 console.log(document.domain);
 
 const element = (
@@ -110,6 +111,7 @@ const element = (
     Hello, world!
   </h1>
 );
+console.log('index.js created element:');
 console.log(element);
 
 /*
