@@ -58,10 +58,12 @@ export default function AuthExample() {
 const fakeAuth = {
   isAuthenticated: false,
   authenticate(cb) {
+    console.log("fakeAuth.authenticate method activated");
     fakeAuth.isAuthenticated = true;
     setTimeout(cb, 100); // fake async
   },
   signout(cb) {
+    console.log("fakeAuth.signout method activated");
     fakeAuth.isAuthenticated = false;
     setTimeout(cb, 100);
   }
@@ -69,10 +71,11 @@ const fakeAuth = {
 
 function AuthButton() {
   let history = useHistory();
-
+  console.log("AuthButton function activated.")
   return fakeAuth.isAuthenticated ? (
     <p>
       Welcome!{" "}
+      {console.log('fakeAuth.signout called with cb as () => history.push("/");')}
       <button
         onClick={() => {
           fakeAuth.signout(() => history.push("/"));
@@ -89,9 +92,10 @@ function AuthButton() {
 // A wrapper for <Route> that redirects to the login
 // screen if you're not yet authenticated.
 function PrivateRoute({ children, ...rest }) {
-  console.log("children:")
+  console.log("Private Route function activated.");
+  console.log("Private Route function children:");
   console.log(children);
-  console.log("{...rest}:")
+  console.log("Private Route function {...rest}:");
   console.log({...rest});
   return (
     <Route
@@ -113,24 +117,27 @@ function PrivateRoute({ children, ...rest }) {
 }
 
 function PublicPage() {
+  console.log("PublicPage function activated.")
   return <h3>Public</h3>;
 }
 
 function ProtectedPage() {
+  console.log('ProtectedPage function activated')
   return <h3>Protected</h3>;
 }
 
 function LoginPage() {
   let history = useHistory();
   let location = useLocation();
-  console.log("location.state:");
+  console.log('LoginPage function activated.')
+  console.log("LoginPage function location.state:");
   console.log(location.state);
 
   let { from } = location.state || { from: { pathname: "/" } };
-  console.log("{from}:");
+  console.log("LoginPage function {from}:");
   console.log({from});
   let login = () => {
-    console.log("login activated");
+    console.log("fakeAuth.authenticate method called with cb as ()=>{history.replace(from);}");
     fakeAuth.authenticate(() => {
       history.replace(from);
     });
@@ -142,4 +149,4 @@ function LoginPage() {
       <button onClick={login}>Log in</button>
     </div>
   );
-}
+} // end of LoginPage()
