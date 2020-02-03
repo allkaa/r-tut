@@ -76,13 +76,13 @@ function AuthButton() {
     <p>
       {console.log('AuthButton called with fakeAuth.isAuthenticated=true')}
       Welcome!{" "}
-      {console.log('AuthButton calls fakeAuth.signout with cb as () => history.push("/");')}
       <button
         onClick={() => {
           fakeAuth.signout(() => history.push("/"));
         }}
       >
         Sign out
+        {console.log('AuthButton clicking [Sign Out] button will call fakeAuth.signout with cb as () => history.push("/");')}
       </button>
     </p>
   ) : (
