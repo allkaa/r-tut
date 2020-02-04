@@ -1,0 +1,67 @@
+AuthExample logic:
+
+1. AuthButton 
+    return fakeAuth.isAuthenticated ? (
+    <p>
+      {console.log('AuthButton called with fakeAuth.isAuthenticated=true')}
+      Welcome!{" "}
+      <button
+        onClick={() => {
+          fakeAuth.signout(() => history.push("/"));
+        }}
+      >
+        Sign out
+        {console.log('AuthButton clicking [Sign Out] button will call fakeAuth.signout with cb as () => history.push("/");')}
+      </button>
+    </p>
+  ) : (
+    <p>
+      {console.log('AuthButton called with fakeAuth.isAuthenticated=false')}
+      You are not logged in.
+    </p>
+  );
+
+2. <Link to="/public">Public Page</Link>
+  return <h3>Public</h3>;
+
+3. <Link to="/protected">Protected Page</Link>
+  <PrivateRoute path="/protected">
+    return (
+    <Route
+      {...rest}
+      render={({ location }) =>
+        fakeAuth.isAuthenticated ? (
+          children
+
+          <ProtectedPage />
+            return <h3>Protected</h3>;
+
+        ) : (
+          <Redirect
+            to={{
+              pathname: "/login",
+              state: { from: location }
+            }}
+
+            <LoginPage />
+              let history = useHistory();
+              let location = useLocation();
+              let { from } = location.state || { from: { pathname: "/" } };
+              return (
+                <div>
+                  <p>You must log in to view the page at {from.pathname}</p>
+                  <button onClick={login}>Log in</button>
+                    let login = () => {
+                      console.log("fakeAuth.authenticate method called with cb as ()=>{history.replace(from);}");
+                      fakeAuth.authenticate(() => {
+                        history.replace(from);
+                      });
+                    };
+                </div>
+              );
+          />
+        )
+      }
+    />
+  );
+
