@@ -29,7 +29,7 @@ export default function AuthExample() {
     <Router>
       <div>
         <AuthButton />
-
+        <p>Links area</p>
         <ul>
           <li>
             <Link to="/public">Public Page</Link>
@@ -38,7 +38,7 @@ export default function AuthExample() {
             <Link to="/protected">Protected Page</Link>
           </li>
         </ul>
-
+        {/*<p>Switch area</p>*/}
         <Switch>
           <Route path="/public">
             <PublicPage />
@@ -74,6 +74,7 @@ function AuthButton() {
   console.log("AuthButton function activated.")
   return fakeAuth.isAuthenticated ? (
     <p>
+      <b>--------------------------</b><br/>
       <b>AuthButton  called with fakeAuth.isAuthenticated=true</b><br />
       {console.log('AuthButton called with fakeAuth.isAuthenticated=true')}
       Welcome!{" "}
@@ -84,13 +85,16 @@ function AuthButton() {
       >
         Sign out
         {console.log('AuthButton clicking [Sign Out] button will call fakeAuth.signout with cb as () => history.push("/");')}
-      </button>
+      </button><br/>
+      <b>--------------------------</b><br/>
     </p>
   ) : (
     <p>
+      <b>--------------------------</b><br/>
       <b>AuthButton  called with fakeAuth.isAuthenticated=false</b><br />
       {console.log('AuthButton called with fakeAuth.isAuthenticated=false')}
-      You are not logged in.
+      You are not logged in.<br/>
+      <b>--------------------------</b><br/>
     </p>
   );
 }
@@ -126,12 +130,24 @@ function PrivateRoute({ children, ...rest }) {
 
 function PublicPage() {
   console.log("PublicPage function activated.")
-  return <h3>Public</h3>;
+  return (
+    <p>
+      <b>--------------------------</b><br/>
+      Public<br/>
+      <b>--------------------------</b><br/>
+    </p>
+  );
 }
 
 function ProtectedPage() {
   console.log('ProtectedPage function activated')
-  return <h3>Protected</h3>;
+  return (
+    <p>
+      <b>--------------------------</b><br/>
+      Protected<br/>
+      <b>--------------------------</b><br/>
+    </p>
+  );
 }
 
 function LoginPage() {
@@ -153,8 +169,14 @@ function LoginPage() {
 
   return (
     <div>
-      <p>You must log in to view the page at {from.pathname}</p>
-      <button onClick={login}>Log in</button>
+      <p>
+        <b>--------------------------</b><br/>
+        <b>LoginPage</b><br/>
+        You must log in to view the page at {from.pathname}<br/>
+      </p>
+      <button onClick={login}>Log in</button><br/>
+      <br/>
+      <strong>--------------------------</strong><br/>
     </div>
   );
 } // end of LoginPage()
