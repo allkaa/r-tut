@@ -74,6 +74,7 @@ function AuthButton() {
   console.log("AuthButton function activated.")
   return fakeAuth.isAuthenticated ? (
     <p>
+      <b>AuthButton  called with fakeAuth.isAuthenticated=true</b><br />
       {console.log('AuthButton called with fakeAuth.isAuthenticated=true')}
       Welcome!{" "}
       <button
@@ -87,6 +88,7 @@ function AuthButton() {
     </p>
   ) : (
     <p>
+      <b>AuthButton  called with fakeAuth.isAuthenticated=false</b><br />
       {console.log('AuthButton called with fakeAuth.isAuthenticated=false')}
       You are not logged in.
     </p>
