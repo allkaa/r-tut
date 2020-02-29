@@ -133,7 +133,7 @@ function PublicPage() {
   return (
     <p>
       <b>--------------------------</b><br/>
-      Public<br/>
+      Public page<br/>
       <b>--------------------------</b><br/>
     </p>
   );
@@ -144,7 +144,7 @@ function ProtectedPage() {
   return (
     <p>
       <b>--------------------------</b><br/>
-      Protected<br/>
+      Protected page<br/>
       <b>--------------------------</b><br/>
     </p>
   );
@@ -171,7 +171,7 @@ function LoginPage() {
     <div>
       <p>
         <b>--------------------------</b><br/>
-        <b>LoginPage</b><br/>
+        <b>Login Page</b><br/>
         You must log in to view the page at {from.pathname}<br/>
       </p>
       <button onClick={login}>Log in</button><br/>
