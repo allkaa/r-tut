@@ -44,7 +44,7 @@ function OldSchoolMenuLink({ label, to, activeOnlyWhenExact }) {
   });
   console.log('match as useRouteMatch(path: to, exact: activeOnlyWhenExact):');
   console.log(match);
-  let ttt = match && "=> ";
+  let ttt = match && "=> "; // expr1 && expr2	-> If expr1 can be converted to true, returns expr2; else, returns expr1.
   console.log('ttt');
   console.log(ttt);
   return (
