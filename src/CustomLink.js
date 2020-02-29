@@ -44,9 +44,12 @@ function OldSchoolMenuLink({ label, to, activeOnlyWhenExact }) {
   });
   console.log('match as useRouteMatch(path: to, exact: activeOnlyWhenExact):');
   console.log(match);
+  let ttt = match && "=> ";
+  console.log('ttt');
+  console.log(ttt);
   return (
     <div className={match ? "active" : ""}>
-      {match && "> "}
+      {match && "=> "}
       <Link to={to}>{label}</Link>
       {console.log('match:')}
       {console.log(match)}
