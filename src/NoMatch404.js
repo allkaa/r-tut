@@ -69,7 +69,7 @@ function WillMatch() {
   console.log(location);
   let history = useHistory();
   console.log('history:');
-  console.log(history);
+  console.log(history.location.pathname);
   return <h3>Matched!</h3>;
 }
 
