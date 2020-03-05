@@ -35,7 +35,7 @@ export default function NoMatchExample() {
             <Link to="/will-not-match">Will Not Match</Link>
           </li>
           <li>
-            <Link to="/also/will/not/match">Also Will Not Match</Link>
+            <Link to="/also/will/not/match">Also Will Not Match using path="*"</Link>
           </li>
         </ul>
 
