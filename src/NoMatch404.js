@@ -26,7 +26,7 @@ export default function NoMatchExample() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/old-match">Old Match, to be redirected</Link>
+            <Link to="/old-match">Old Match, will be redirected to [Will Match]</Link>
           </li>
           <li>
             <Link to="/will-match">Will Match</Link>
