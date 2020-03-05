@@ -5,7 +5,8 @@ import {
   Link,
   Switch,
   Redirect,
-  useLocation
+  useLocation,
+  useHistory
 } from "react-router-dom";
 
 // You can use the last <Route> in a <Switch> as a kind of
@@ -66,6 +67,9 @@ function WillMatch() {
   let location = useLocation();
   console.log('location:');
   console.log(location);
+  let history = useHistory();
+  console.log('history:');
+  console.log(history);
   return <h3>Matched!</h3>;
 }
 
