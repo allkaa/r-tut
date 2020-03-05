@@ -15,7 +15,7 @@ import {
 //
 // - A <Switch> renders the first child <Route> that matches
 // - A <Redirect> may be used to redirect old URLs to new ones
-// - A <Route path="*> always matches
+// - A <Route path="*"> always matches
 
 export default function NoMatchExample() {
   return (
