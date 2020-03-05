@@ -63,6 +63,9 @@ function Home() {
 }
 
 function WillMatch() {
+  let location = useLocation();
+  console.log('location:');
+  console.log(location);
   return <h3>Matched!</h3>;
 }
 
