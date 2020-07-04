@@ -1,7 +1,7 @@
 Username for 'https://github.com': allkaa
 Password for 'https://allkaa@github.com': h...3!
 
-
+// testing
 Debian upd 2
 Win upd 2
 Web structure:
