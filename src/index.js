@@ -116,15 +116,19 @@ const element = (
 console.log('index.js created element:');
 console.log(element);
 
+/*
 ReactDOM.render(
   <App />,
   document.getElementById('root')
 );
-  
-/*
+*/
+
+///*
 function tick() {
   ReactDOM.render(<App />, document.getElementById('root'))
 }
-*/
-//setInterval(tick, 1000);
-//setTimeout(() => {ReactDOM.unmountComponentAtNode(document.getElementById('root'));}, 10000);
+//*/
+setInterval(tick, 1000);
+console.log('setInterval issued')
+setTimeout(() => {ReactDOM.unmountComponentAtNode(document.getElementById('root'));}, 10000);
+console.log('setTimeout issued')
