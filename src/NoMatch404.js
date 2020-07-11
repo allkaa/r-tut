@@ -45,7 +45,7 @@ export default function NoMatchExample() {
             <Home />
           </Route>
           <Route path="/old-match">
-            <Redirect to="/will-match" />
+            <Redirect push={true} to="/will-match" />
           </Route>
           <Route path="/will-match">
             <WillMatch />
@@ -72,9 +72,12 @@ function WillMatch() {
   let history = useHistory();
   console.log('history:');
   console.log(history.location.pathname);
+  console.log(history);
   let dt = new Date();
   let reply = dt.toLocaleTimeString('uk'); // 'en-US'
-  return <h3>Matched! {reply}</h3>;
+  return <h3>
+    Matched! <code>{location.pathname}</code> {reply}
+    </h3>;
 }
 
 function NoMatch() {
@@ -86,7 +89,7 @@ function NoMatch() {
   return (
     <div>
       <h3>
-        No match for <code>{location.pathname} {reply}</code>
+        No match for <code>{location.pathname}</code> {reply}
       </h3>
     </div>
   );
