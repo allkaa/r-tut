@@ -123,7 +123,7 @@ ReactDOM.render(
 );
 //*/
 
-/*
+/* Timing sample.
 function tick() {
   ReactDOM.render(<App />, document.getElementById('root'))
 }
