@@ -128,7 +128,10 @@ function tick() {
   ReactDOM.render(<App />, document.getElementById('root'))
 }
 //*/
+//tick();
+// Executes a function, after waiting a specified number of milliseconds and repeats the execution of the function continuously.
 setInterval(tick, 1000);
 console.log('setInterval issued')
+// Executes a function, after waiting a specified number of milliseconds.
 setTimeout(() => {ReactDOM.unmountComponentAtNode(document.getElementById('root'));}, 10000);
 console.log('setTimeout issued')

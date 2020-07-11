@@ -60,7 +60,9 @@ export default function NoMatchExample() {
 }
 
 function Home() {
-  return <h3>Home</h3>;
+  let dt = new Date();
+  let reply = dt.toLocaleTimeString('uk'); // 'en-US'
+  return <h3>Home {reply}</h3>;
 }
 
 function WillMatch() {
@@ -70,17 +72,21 @@ function WillMatch() {
   let history = useHistory();
   console.log('history:');
   console.log(history.location.pathname);
-  return <h3>Matched!</h3>;
+  let dt = new Date();
+  let reply = dt.toLocaleTimeString('uk'); // 'en-US'
+  return <h3>Matched! {reply}</h3>;
 }
 
 function NoMatch() {
   let location = useLocation();
   console.log('location:');
   console.log(location);
+  let dt = new Date();
+  let reply = dt.toLocaleTimeString('uk'); // 'en-US'
   return (
     <div>
       <h3>
-        No match for <code>{location.pathname}</code>
+        No match for <code>{location.pathname} {reply}</code>
       </h3>
     </div>
   );
