@@ -45,6 +45,7 @@ import './StyleSheetsDemo4.css'
 //import './styleRespImg.css' // <--------
 import './styleHWT.css' // <--------
 
+// application js files will be loaded from src dir
 //import App from './AppInitial'
 //import App from './App'
 //import App from './Api'
@@ -91,7 +92,8 @@ import './styleHWT.css' // <--------
 //import App from './UrlParamsExample'
 //import App from './AuthExample'
 //import App from './CustomLink'
-import App from './NoMatch404'
+//import App from './NoMatch404'
+import App from './StateHookSample'
 
 /*
 // A class component must include render(), and the return statement can only return ONE parent element:
