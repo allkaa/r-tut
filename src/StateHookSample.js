@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 // React function component.
-function Example() {
+function Hooks_Example() {
   // Destructing assignment syntax sample:
   const [a, b] = f(); // using destructuring assignment syntax to parse an array returned from a function.
   console.log('a=',a,'b=',b);
@@ -56,8 +56,27 @@ function Example() {
   );
 }
 
-export default Example;
+export default Hooks_Example;
 
 function f() {
   return [1, 'one'];
+}
+
+// Sample using class.
+class Example extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { count: 0 };
+  }
+
+  render() {
+    return (
+      <div>
+        <p>You clicked {this.state.count} times</p>
+        <button onClick={() => this.setState({ count: this.state.count + 1 })}>
+          Click me
+        </button>
+      </div>
+    );
+  }
 }
