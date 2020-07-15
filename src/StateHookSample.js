@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // React function component.
 function Example() {
   // Destructing assignment syntax sample:
   const [a, b] = f(); // using destructuring assignment syntax to parse an array returned from a function.
   console.log('a=',a,'b=',b);
+  //
+  // State Hook samples:
   // Declare a new state variable, which we'll call "count" using destructuring assignment syntax
   // Two constants will be created count as number and setCount(args) as function.
   const [count, setCount] = useState(0); // initial count state set as zero.
@@ -20,10 +22,22 @@ function Example() {
   const [fruit, setFruit] = useState('banana');
   const [todos, setTodos] = useState(['text', ' ', 'Learn Hooks']);
   //const [todos, setTodos] = useState([{ key_learn: 'Learn Hooks' }]); // does not work - React child can not be object with key(s).
+  //
+  // Effect Hook sample:
+  // It serves the same purpose as componentDidMount, componentDidUpdate, and componentWillUnmount in React classes.
+  // Similar to componentDidMount and componentDidUpdate:
+  useEffect(() => {
+    if (count > 0) {
+      // Update the document title using the browser API:
+      document.title = `You clicked ${count} times`;
+    }
+  });
+  useEffect(() => {window.alert(`count is ${count}`)});
 
+  // NB! Only one child can be returned!
   return (
-    <div>
-      <p>You clicked {count} times</p>
+    <div> 
+      <p>You clicked {count} times asshole!</p>
       <p>You age is {age}</p>
       <p>You fruit is {fruit}</p>
       <p>You todos is {todos}</p>
