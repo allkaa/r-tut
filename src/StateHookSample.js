@@ -23,7 +23,7 @@ function Example() {
   const [todos, setTodos] = useState(['text', ' ', 'Learn Hooks']);
   //const [todos, setTodos] = useState([{ key_learn: 'Learn Hooks' }]); // does not work - React child can not be object with key(s).
   //
-  // Effect Hook sample:
+  // Effect Hook samples:
   // It serves the same purpose as componentDidMount, componentDidUpdate, and componentWillUnmount in React classes.
   // Similar to componentDidMount and componentDidUpdate:
   useEffect(() => {
@@ -32,6 +32,7 @@ function Example() {
       document.title = `You clicked ${count} times`;
     }
   });
+  // next Effect Hook:
   useEffect(() => {window.alert(`count is ${count}`)});
 
   // NB! Only one child can be returned!
