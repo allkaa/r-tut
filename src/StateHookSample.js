@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 function Hooks_Example(props) {
   console.log('props:');
   console.log(props);
-  const dt = props.dattime; // NB! props are not seen in useEffect arrow functions.
   // Destructing assignment syntax sample:
   const [a, b] = f(); // using destructuring assignment syntax to parse an array returned from a function.
   console.log('a=',a,'b=',b);
@@ -34,6 +33,7 @@ function Hooks_Example(props) {
   // and call it later after performing the DOM updates.
   // React will apply every effect used by the component, in the order they were specified.
   //
+  const dt = props.dattime; // NB! props are not seen in useEffect arrow functions.
   // First Effect Hook:
   useEffect(() => {
     if (count > 0) {
