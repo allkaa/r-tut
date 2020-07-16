@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 function Hooks_Example(props) {
   console.log('props:');
   console.log(props);
-  const dt = props.dattime;
+  const dt = props.dattime; // NB! props are not seen in useEffect arrow functions.
   // Destructing assignment syntax sample:
   const [a, b] = f(); // using destructuring assignment syntax to parse an array returned from a function.
   console.log('a=',a,'b=',b);
