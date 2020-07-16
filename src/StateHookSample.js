@@ -24,8 +24,11 @@ function Hooks_Example() {
   //const [todos, setTodos] = useState([{ key_learn: 'Learn Hooks' }]); // does not work - React child can not be object with key(s).
   //
   // Effect Hook samples:
-  // It serves the same purpose as componentDidMount, componentDidUpdate, and componentWillUnmount in React classes.
+  // It serves same as componentDidMount, componentDidUpdate, and componentWillUnmount combined in React classes.
   // Similar to componentDidMount and componentDidUpdate.
+  // By using Effect Hook, we tell React that our component needs to do something after render.
+  // React will remember the function we passed (we’ll refer to it as our “effect”),
+  // and call it later after performing the DOM updates.
   // First Effect Hook:
   useEffect(() => {
     if (count > 0) {
@@ -64,10 +67,18 @@ function f() {
 }
 
 // Sample using class.
+// In React class components, the render method itself shouldn’t cause side effects. It would be too early - 
+// we typically want to perform our effects after React has updated the DOM in componentDidMount and componentDidUpdate.
 class Example extends React.Component {
   constructor(props) {
     super(props);
     this.state = { count: 0 };
+  }
+  componentDidMount() {
+    document.title = `You clicked ${this.state.count} times`;
+  }
+  componentDidUpdate() {
+    document.title = `You clicked ${this.state.count} times`;
   }
 
   render() {
