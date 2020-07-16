@@ -25,7 +25,8 @@ function Hooks_Example() {
   //
   // Effect Hook samples:
   // It serves the same purpose as componentDidMount, componentDidUpdate, and componentWillUnmount in React classes.
-  // Similar to componentDidMount and componentDidUpdate:
+  // Similar to componentDidMount and componentDidUpdate.
+  // First Effect Hook:
   useEffect(() => {
     if (count > 0) {
       // Update the document title using the browser API:
