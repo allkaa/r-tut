@@ -120,7 +120,7 @@ console.log(element);
 
 ///*
 ReactDOM.render(
-  <App />,
+  <App age={67} dattime={`${Date()}`} />,
   document.getElementById('root')
 );
 //*/

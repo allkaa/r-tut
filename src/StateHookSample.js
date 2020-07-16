@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
 // React function component.
-function Hooks_Example() {
+function Hooks_Example(props) {
+  console.log('props:');
+  console.log(props);
+  const dt = props.dattime;
   // Destructing assignment syntax sample:
   const [a, b] = f(); // using destructuring assignment syntax to parse an array returned from a function.
   console.log('a=',a,'b=',b);
@@ -18,7 +21,7 @@ function Hooks_Example() {
   console.log(setCount);
   console.log('useState:');
   console.log(useState);
-  const [age, setAge] = useState(67);
+  const [age, setAge] = useState(props.age);
   const [fruit, setFruit] = useState('banana');
   const [todos, setTodos] = useState(['text', ' ', 'Learn Hooks']);
   //const [todos, setTodos] = useState([{ key_learn: 'Learn Hooks' }]); // does not work - React child can not be object with key(s).
@@ -27,17 +30,19 @@ function Hooks_Example() {
   // It serves same as componentDidMount, componentDidUpdate, and componentWillUnmount combined in React classes.
   // Similar to componentDidMount and componentDidUpdate.
   // By using Effect Hook, we tell React that our component needs to do something after render.
-  // React will remember the function we passed (we’ll refer to it as our “effect”),
+  // React will remember the arrow function we passed (we’ll refer to it as our “effect”),
   // and call it later after performing the DOM updates.
+  // React will apply every effect used by the component, in the order they were specified.
+  //
   // First Effect Hook:
   useEffect(() => {
     if (count > 0) {
       // Update the document title using the browser API:
-      document.title = `You clicked ${count} times`;
+      document.title = `You clicked ${count} times at ${dt}`;
     }
   });
   // next Effect Hook:
-  useEffect(() => {window.alert(`count is ${count}`)});
+  useEffect(() => {window.alert(`count is ${count} at ${dt}`)});
 
   // NB! Only one child can be returned!
   return (
