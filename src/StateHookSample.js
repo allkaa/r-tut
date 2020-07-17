@@ -46,6 +46,7 @@ function Hooks_Example(props) {
   // as a second argument. 
   useEffect(() => {window.alert(`count is ${count} at ${props.dattime}`)},[]);
 
+  //
   // NB! Only one child can be returned!
   return (
     <div> 
