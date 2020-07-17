@@ -118,12 +118,12 @@ const element = (
 console.log('index.js created element:');
 console.log(element);
 
-///*
+/*
 ReactDOM.render(
   <App age={67} dattime={`${Date()}`} />,
   document.getElementById('root')
 );
-//*/
+*/
 
 /* Timing sample.
 function tick() {
