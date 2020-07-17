@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 function Hooks_Example(props) {
   console.log('props:');
   console.log(props);
-  const dt = props.dattime;
   // Destructing assignment syntax sample:
   const [a, b] = f(); // using destructuring assignment syntax to parse an array returned from a function.
   console.log('a=',a,'b=',b);
@@ -38,11 +37,13 @@ function Hooks_Example(props) {
   useEffect(() => {
     if (count > 0) {
       // Update the document title using the browser API:
-      document.title = `You clicked ${count} times at ${dt}`;
+      document.title = `You clicked ${count} times at ${props.dattime}`;
     }
   });
   // next Effect Hook:
-  useEffect(() => {window.alert(`count is ${count} at ${dt}`)});
+  // If you want to run an effect and clean it up only once (on mount and unmount), you can pass an empty array ([])
+  // as a second argument. 
+  useEffect(() => {window.alert(`count is ${count} at ${props.dattime}`)},[]);
 
   // NB! Only one child can be returned!
   return (
