@@ -492,4 +492,70 @@ FileUploadbodyPUT.js    indexTest.html                       oopjs.js           
 Films.json              JsonAndOthers.js                     packageForDeployGitHub.json  scriptsXMLHttpRequestXML.js
 akaarna@unl:~/r-tut/r-tut$ ls -s
 ===============================================================================================================================
+C:\react\react-tutorial>npm view eslint-plugin-react-hooks
 
+eslint-plugin-react-hooks@4.0.8 | MIT | deps: none | versions: 113
+ESLint rules for React Hooks
+https://reactjs.org/
+
+keywords: eslint, eslint-plugin, eslintplugin, react
+
+dist
+.tarball: https://registry.npmjs.org/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.0.8.tgz
+.shasum: a9b1e3d57475ccd18276882eff3d6cba00da7a56
+.integrity: sha512-6SSb5AiMCPd8FDJrzah+Z4F44P2CdOaK026cXFV+o/xSRzfOiV1FNFeLl2z6xm3yqWOQEZ5OfVgiec90qV2xrQ==
+.unpackedSize: 114.4 kB
+
+maintainers:
+- acdlite <npm@andrewclark.io>
+- brianvaughn <briandavidvaughn@gmail.com>
+- gaearon <dan.abramov@gmail.com>
+- lunaruan <lunaris.ruan@gmail.com>
+- threepointone <threepointone@gmail.com>
+- trueadm <dg@domgan.com>
+
+dist-tags:
+canary: 0.0.0-57333ca33                     next: 0.0.0-7f28234f8
+experimental: 0.0.0-experimental-7f28234f8  unstable: 0.0.0-da834083c
+latest: 4.0.8
+
+published 4 days ago by gaearon <dan.abramov@gmail.com>
+
+C:\react\react-tutorial>npm install eslint-plugin-react-hooks --save-dev
+npm WARN eslint-config-react-app@5.1.0 requires a peer of eslint-plugin-react-hooks@1.x but none is installed. You must install peer dependencies yourself.
+npm WARN react-scripts@3.3.0 requires a peer of typescript@^3.2.1 but none is installed. You must install peer dependencies yourself.
+npm WARN sass-loader@8.0.0 requires a peer of node-sass@^4.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN sass-loader@8.0.0 requires a peer of sass@^1.3.0 but none is installed. You must install peer dependencies yourself.
+npm WARN sass-loader@8.0.0 requires a peer of fibers@>= 3.1.0 but none is installed. You must install peer dependencies yourself.
+npm WARN tsutils@3.17.1 requires a peer of typescript@>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\jest-haste-map\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\chokidar\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
++ eslint-plugin-react-hooks@4.0.8
+added 1 package, updated 1 package and audited 1702 packages in 45.028s
+found 42268 vulnerabilities (42249 low, 18 moderate, 1 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+C:\react\react-tutorial>npm audit fix
+npm WARN eslint-config-react-app@5.1.0 requires a peer of eslint-plugin-react-hooks@1.x but none is installed. You must install peer dependencies yourself.
+npm WARN react-scripts@3.3.0 requires a peer of typescript@^3.2.1 but none is installed. You must install peer dependencies yourself.
+npm WARN sass-loader@8.0.0 requires a peer of node-sass@^4.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN sass-loader@8.0.0 requires a peer of sass@^1.3.0 but none is installed. You must install peer dependencies yourself.
+npm WARN sass-loader@8.0.0 requires a peer of fibers@>= 3.1.0 but none is installed. You must install peer dependencies yourself.
+npm WARN tsutils@3.17.1 requires a peer of typescript@>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta but none is installed. You must install peer dependencies yourself.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\jest-haste-map\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.11 (node_modules\chokidar\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.11: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.2 (node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
+added 43 packages from 24 contributors, removed 22 packages and updated 31 packages in 118.914s
+fixed 41954 of 42268 vulnerabilities in 1702 scanned packages
+  314 vulnerabilities required manual review and could not be updated
+
+C:\react\react-tutorial>
